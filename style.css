@@ -1,0 +1,339 @@
+/* --- VARIABLES Y RESET --- */
+:root {
+    --primary-color: #6c5ce7; /* Morado eléctrico */
+    --primary-hover: #a29bfe; /* Lila brillante */
+    --dark: #2d3436; /* Carbón oscuro para texto */
+    --light: #f3f0ff; /* Morado muuuuy claro casi blanco */
+    --white: #ffffff; /* Blanco puro */
+    --text-muted: #636e72; /* Gris neutro */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave nativo de CSS */
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* --- TIPOGRAFÍA Y UTILIDADES --- */
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* --- BOTONES --- */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- PLACEHOLDERS BLANCOS PARA IMÁGENES --- */
+/* Esta clase crea los espacios blancos elegantes */
+.image-placeholder {
+    background-color: var(--white);
+    border: 2px dashed var(--text-muted); /* <--- Aquí se aplica el cambio */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    transition: var(--transition);
+}
+
+.image-placeholder:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: scale(1.02);
+}
+
+.portrait { aspect-ratio: 3/4; }
+.landscape { aspect-ratio: 16/9; }
+.square { aspect-ratio: 1/1; }
+.tall { aspect-ratio: 9/16; }
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90vh;
+    padding: 5% 10%;
+    background: linear-gradient(135deg, var(--white) 0%, var(--light) 100%);
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 5%;
+}
+
+.badge {
+    background-color: rgba(255, 71, 87, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-photo {
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* --- FEATURES SECTION --- */
+.features {
+    padding: 8% 10%;
+    background-color: var(--white);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid var(--light);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: transparent;
+}
+
+.feature-card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+}
+
+/* --- GALLERY SECTION --- */
+.gallery {
+    padding: 8% 10%;
+    background-color: var(--light);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Creando un diseño asimétrico interesante */
+.gallery-grid .landscape { grid-column: span 2; }
+.gallery-grid .tall { grid-row: span 2; }
+
+/* --- REVIEWS SECTION --- */
+.reviews {
+    padding: 8% 10%;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.review-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote {
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+}
+
+.author {
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+/* --- FOOTER / CTA --- */
+.cta-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 8% 10%;
+}
+
+.cta-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* --- RESPONSIVE DESIGN (Móviles) --- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 15%;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 4rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .hero-image {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid .landscape, 
+    .gallery-grid .tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+/* --- BOTÓN DE WHATSAPP --- */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Espacio entre el ícono y el texto */
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: 1.2rem;
+    
+    /* Colores oficiales de WhatsApp */
+    background-color: #25D366;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    border: 2px solid transparent;
+}
+
+.btn-whatsapp:hover {
+    background-color: #ffffff;
+    color: #25D366; /* El texto y el ícono se vuelven verdes */
+    border-color: #25D366;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-whatsapp svg {
+    /* Asegura que el ícono herede el color del texto al pasar el mouse */
+    transition: var(--transition);
+}
