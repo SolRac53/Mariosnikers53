@@ -1,11 +1,11 @@
 /* --- VARIABLES Y RESET --- */
 :root {
-    --primary-color: #6c5ce7; /* Morado eléctrico */
-    --primary-hover: #a29bfe; /* Lila brillante */
-    --dark: #2d3436; /* Carbón oscuro para texto */
-    --light: #f3f0ff; /* Morado muuuuy claro casi blanco */
-    --white: #ffffff; /* Blanco puro */
-    --text-muted: #636e72; /* Gris neutro */
+    --primary-color: #d4af37; /* Dorado champán */
+    --primary-hover: #f1c40f; /* Dorado brillante */
+    --dark: #f8f9fa; /* Texto principal (blanco suave) */
+    --light: #24242b; /* Fondo de secciones (gris muy oscuro) */
+    --white: #141418; /* Fondo principal (casi negro) */
+    --text-muted: #9ca3af; /* Texto secundario grisáceo */
     --transition: all 0.3s ease;
 }
 
@@ -100,6 +100,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     transition: var(--transition);
+    object-fit: cover;
 }
 
 .image-placeholder:hover {
