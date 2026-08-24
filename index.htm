@@ -6,61 +6,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheBlackProject</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Usamos Google Fonts para una tipografía moderna y limpia -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HERO SECTION: La primera impresión -->
+    <!-- HERO SECTION -->
     <header class="hero">
         <div class="hero-content">
-            <span class="badge">El soltero más cotizado de Grecia
-
-            </span>
+            <span class="badge">El soltero más cotizado de Grecia</span>
             <h1>Conoce a <span class="highlight">Yojan</span></h1>
-            <p>Divertido, leal y cocina una lasaña que te hará llorar de alegría. Descubre por qué Yojan es el "match" que estabas esperando.
-                Además coge como un toro
-            </p>
+            <p>Divertido, leal y cocina una lasaña que te hará llorar de alegría. Descubre por qué Yojan es el "match" que estabas esperando. Además coge como un toro</p>
             <a href="#contacto" class="btn-primary">¡Quiero una cita!</a>
         </div>
+        
+        <!-- CARRUSEL CILÍNDRICO EN 3D -->
         <div class="hero-image">
-            <!-- Espacio blanco para la foto principal -->
-           <img src="imagenes/foto_principal.jpg" alt="Foto principal de mi amigo" class="image-placeholder portrait main-photo">
+            <div class="carousel-cylinder">
+                <div class="cylinder-track">
+                    
+                    <!-- CARTA 1: FUERTE -->
+                    <div class="cylinder-slide slide-1">
+                        <div class="feature-card hero-flip-card">
+                            <input type="checkbox" id="hero-card-1" class="card-toggle" hidden>
+                            <label for="hero-card-1" class="feature-card-inner">
+                                <div class="feature-front">
+                                    <img src="imagenes/foto_principal3.jpg" alt="Yojan Fuerte" class="image-placeholder portrait main-photo">
+                                </div>
+                                <div class="feature-back hero-back">
+                                    <span class="hero-word">Fuerte</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- CARTA 2: PODEROSO -->
+                    <div class="cylinder-slide slide-2">
+                        <div class="feature-card hero-flip-card">
+                            <input type="checkbox" id="hero-card-2" class="card-toggle" hidden>
+                            <label for="hero-card-2" class="feature-card-inner">
+                                <div class="feature-front">
+                                    <img src="imagenes/foto_principal.jpg" alt="Yojan Poderoso" class="image-placeholder portrait main-photo">
+                                </div>
+                                <div class="feature-back hero-back">
+                                    <span class="hero-word">Poderoso</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- CARTA 3: SENSUAL -->
+                    <div class="cylinder-slide slide-3">
+                        <div class="feature-card hero-flip-card">
+                            <input type="checkbox" id="hero-card-3" class="card-toggle" hidden>
+                            <label for="hero-card-3" class="feature-card-inner">
+                                <div class="feature-front">
+                                    <img src="imagenes/foto_principal2.jpg" alt="Yojan Sensual" class="image-placeholder portrait main-photo">
+                                </div>
+                                <div class="feature-back hero-back">
+                                    <span class="hero-word">Sensual</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- FEATURES: Sus mejores cualidades -->
+    <!-- FEATURES SECTION -->
     <section class="features">
         <div class="section-title">
             <h2>¿Por qué salir con él?</h2>
             <p>No lo digo yo, lo dice la ciencia (y sus amigos).</p>
         </div>
         <div class="feature-grid">
+            <!-- Tarjeta 1: Amante de los animales -->
             <div class="feature-card">
-                <div class="icon">🐶</div>
-                <h3>Amante de los animales</h3>
-                <p>Tu perro lo va a querer más que a ti. Garantizado.</p>
+                <input type="checkbox" id="feature-card-1" class="card-toggle" hidden>
+                <label for="feature-card-1" class="feature-card-inner">
+                    <div class="feature-front">
+                        <div class="icon">🐱</div>
+                        <h3>Amante de los animales</h3>
+                        <p>Tu mascota lo va a querer más que a ti. Garantizado.</p>
+                    </div>
+                    <div class="feature-back">
+                        <h3>Félix & Compañía</h3>
+                        <p>Es un protector total de los animales. Tiene un gato legendario llamado Félix que lo gobierna en secreto, demostrando una ternura y paciencia inigualables.</p>
+                    </div>
+                </label>
             </div>
+
+            <!-- Tarjeta 2: Gamer -->
             <div class="feature-card">
-                <div class="icon">🍳</div>
-                <h3>Chef en proceso</h3>
-                <p>Sobrevive a algo más que cereal. Prepara cenas increíbles los viernes.</p>
+                <input type="checkbox" id="feature-card-2" class="card-toggle" hidden>
+                <label for="feature-card-2" class="feature-card-inner">
+                    <div class="feature-front">
+                        <div class="icon">🗣️‼️</div>
+                        <h3>El mejor gamer de su casa</h3>
+                        <p>Dominio total con el teclado y el control. Toca para ver su catálogo.</p>
+                    </div>
+                    <div class="feature-back">
+                        <h3>Nivel Leyenda</h3>
+                        <p>Desempeño brutal en League of Legends, Overwatch, Dead By Daylight, Evolve y más de 300 horas jugadas en Kenshi sufriendo con esclavos.</p>
+                    </div>
+                </label>
             </div>
+
+            <!-- Tarjeta 3: Gran conversador -->
             <div class="feature-card">
-                <div class="icon">🎧</div>
-                <h3>Gran conversador</h3>
-                <p>Sabe escuchar y tiene anécdotas para mantener la plática por horas.</p>
+                <input type="checkbox" id="feature-card-3" class="card-toggle" hidden>
+                <label for="feature-card-3" class="feature-card-inner">
+                    <div class="feature-front">
+                        <div class="icon">🎧</div>
+                        <h3>Gran conversador</h3>
+                        <p>Sabe escuchar y tiene anécdotas para mantener la plática por horas.</p>
+                    </div>
+                    <div class="feature-back">
+                        <h3>Factos & Warhammer</h3>
+                        <p>Te suelta facto tras facto sobre las relaciones amorosas combinados con datos masivos y complejos del lore de Warhammer 40K sin parar.</p>
+                    </div>
+                </label>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY SECTION: Estilo asimétrico moderno -->
+    <!-- GALLERY SECTION -->
     <section class="gallery">
         <div class="section-title">
             <h2>Un vistazo a su vida</h2>
         </div>
         <div class="gallery-grid">
-            <!-- Espacios blancos para diferentes fotos -->
             <div class="image-placeholder landscape"><span>Foto de viaje</span></div>
             <div class="image-placeholder square"><span>Foto con su mascota</span></div>
             <div class="image-placeholder tall"><span>Foto de cuerpo completo</span></div>
@@ -68,22 +144,19 @@
         </div>
     </section>
 
-    <!-- REVIEWS: Testimonios en broma/serio -->
+    <!-- REVIEWS SECTION -->
     <section class="reviews">
         <div class="review-card">
             <p class="quote">"Es el mejor amigo que alguien puede tener. Si no me casara el próximo mes, me casaría con él."</p>
-            <span class="author">- [Tu Nombre], Creador de esta página</span>
+            <span class="author">- NoobMaster69, Creador de esta página</span>
         </div>
     </section>
 
-   <!-- FOOTER / CTA -->
+    <!-- FOOTER / CTA -->
     <footer id="contacto" class="cta-section">
         <h2>¿Lista para el mejor café de tu vida?</h2>
         <p>Los espacios en su agenda se llenan rápido.</p>
-        
-        <!-- Reemplaza "1234567890" con el número real de tu amigo (incluyendo código de país, sin el signo +) -->
         <a href="https://wa.me/50661360019?text=¡Hola!%20Vi%20tu%20página%20web%20y%20me%20encantaría%20que%20fuéramos%20por%20ese%20café.☕" target="_blank" class="btn-whatsapp">
-            <!-- Ícono SVG de WhatsApp (Código puro, no requiere imágenes) -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
                 <path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 415.2c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.4l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
             </svg>
